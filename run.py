@@ -36,6 +36,8 @@ def start():
     """
     Game Start and answer the questions
     """
+    choices = []
+    correct_choices = 0
     question_num = 1
 
     for key in questions:
@@ -43,7 +45,19 @@ def start():
         print(key)
         for i in options[question_num - 1]:
             print(i)
+        choice = input("Enter Your Answer (A,B,C or D): ")
+        choice = choice.upper
+        choices.append(choice)
+        correct_choices += check_answer(questions.get(key), choice)
+
         question_num += 1
+    display_score(correct_choices, choices)
+
+
+def check_answer(answer, choice):
+
+
+def display_score(correct_choices, choices):
 
 
 questions = {
