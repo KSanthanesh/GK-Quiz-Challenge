@@ -31,6 +31,21 @@ while True:
         print("Hi", name, "Let's start the Game")
         break
 
+
+def start():
+    """
+    Game Start and answer the questions
+    """
+    question_num = 1
+
+    for key in questions:
+        print("****************************************************")
+        print(key)
+        for i in options[question_num - 1]:
+            print(i)
+        question_num += 1
+
+
 questions = {
     "1. which Country is known as the 'land of Raising Sun'?\n ": "A",
     "2. Which Country is known as the 'Playground of Europe'?\n": "C",
@@ -56,5 +71,19 @@ options = [
     ["A. 75%", "B. 60%", "C. 69%", "D. 65%\n"],
     ["A. The Carolina Reaper", "B. Ghost Pepper", "C. Pot Barrackpore"
      "D. Pot Red\n"],
-    ["A. China", "B. India", "C. Africa"]
+    ["A. China", "B. India", "C. Africa", "D. Russia\n"],
+    ["A. Four", "B. Six", "C. Eight", "D. Two\n"],
+    ["A. Pepper", "B. Paprika", "C. Thyme", "D. Chilli\n"],
+    ["A. Ash", "B. Birch", "C. Oak", "D. Rowan\n"],
+    ["A. Japan", "B. Russia", "C. Chile", "D. Indonesia\n"],
+    ["A. English", "B. Chinese", "C. German", "D. French\n"],
+    ["A. Jupitar", "B. Mars", "C. Mercury", "D. Venus\n"],
+    ["A. Finland", "B. Germany", "C. France", "D. Ireland\n"],
+    ["A. 240 degree", "B. 360 degree", "C. 180 degree", "D. 90 degree\n"],
+    ["A. Sodium hydroxide", "B. Sodium bicarbonate", "C. Sodium Carbonate",
+     "D. Sodium Chloride\n"],
+    ["A. 995", "B. 997", "C. 999", "D. 993\n"],
 ]
+
+
+start()
