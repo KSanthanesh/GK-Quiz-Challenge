@@ -55,9 +55,24 @@ def start():
 
 
 def check_answer(answer, choice):
+    """
+    Command given an answers
+    """
+    if answer == choice:
+        print("\n Well done! Correct Answer!")
+        return 1
+    else:
+        print("\n Incorrect Answer\n")
+        return 0
 
 
 def display_score(correct_choices, choices):
+    """
+    Score display
+    """
+    print("*****------------------------------------*****")
+    print("Quiz Results")
+    print("*****-------------------------------------*****")
 
 
 questions = {
