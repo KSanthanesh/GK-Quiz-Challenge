@@ -74,9 +74,15 @@ def display_score(correct_choices, choices):
     """
     Score display
     """
-    print("-----------------------------------------------")
-    print("Quiz Results")
-    print("-----------------------------------------------")
+    print("**********************************************************")
+    print("             ---------------------------")
+    print("             |       Quiz Results      |")
+    print("             ---------------------------\n")
+    score = int(correct_choices)
+    print("Thank you for playing! You got", score, "/",
+          len(questions), "questions correct.")
+    mark = int(score/len(questions) * 100)
+    print("Score is:", str(mark), "%.\n")
 
 
 questions = {
