@@ -85,6 +85,21 @@ def display_score(correct_choices, choices):
     print("Score is:", str(mark), "%.\n")
 
 
+def play_again():
+    """
+    Choice given to Play again
+    """
+    response = input("Do you want to Play again:(yes or no): ")
+    response = response.upper()
+    if response in ("Y", "YES"):
+        return True
+    elif response in ("N", "NO"):
+        return False
+    else:
+        print("Please Enter Valid option (yes or no).")
+        return play_again()
+
+
 questions = {
     "1. What is the square root of 144?\n ": "A",
     "2. Which Country is known as the 'Playground of Europe'?\n": "C",
@@ -127,3 +142,7 @@ options = [
 
 
 start()
+
+while play_again():
+    start()
+print("Thanks for Playing this Game!")
