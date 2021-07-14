@@ -1,3 +1,7 @@
+"""
+Multiple choice question and answers game
+"""
+import time
 # Heading
 print("\n")
 print("               *************************")
@@ -5,7 +9,7 @@ print("               ****                 ****")
 print("               **  GK Quiz Challenge  **")
 print("               ****                 ****")
 print("               *************************")
-
+time.sleep(1)
 # Welcome message
 print("\nWelcome to my Computer Quiz\n")
 
@@ -17,12 +21,11 @@ if confirm in ("Y", "YES"):
     pass
 else:
     print("Thank You! Come back later")
-    quit()
+    exit()
 
-"""
-Enter Name of the user, Game doesnot start without
-Name details.
-"""
+
+time.sleep(0.5)
+# Enter Name of the user, Game doesnot start without Name details.
 while True:
     name = input("Please Enter Your Name: ")
     if not name:
@@ -30,6 +33,7 @@ while True:
     else:
         print("Hi", name, "Let's start the Game\n")
         break
+time.sleep(0.5)
 
 
 def start():
@@ -45,6 +49,7 @@ def start():
         print(key)
         for i in options[question_num - 1]:
             print(i)
+
         while True:
             choice = input("Enter Your Answer (A,B,C or D): ")
             if choice not in ("A", "B", "C", "D", "a", "b", "c", "d"):
@@ -55,7 +60,10 @@ def start():
         choices.append(choice)
         correct_choices += check_answer(questions.get(key), choice)
         question_num += 1
-    display_score(correct_choices, choices)
+    display_score(correct_choices)
+
+
+time.sleep(0.5)
 
 
 def check_answer(answer, choice):
@@ -63,14 +71,14 @@ def check_answer(answer, choice):
     Command given an answers
     """
     if answer == choice:
-        print("\n Well done! Correct Answer!")
-        return 1
+        print("\n Well done! Correct Answer!\n")
+        return True
     else:
         print("\n Incorrect Answer\n")
-        return 0
+        return False
 
 
-def display_score(correct_choices, choices):
+def display_score(correct_choices):
     """
     Score display
     """
@@ -83,6 +91,9 @@ def display_score(correct_choices, choices):
           len(questions), "questions correct.")
     mark = int(score/len(questions) * 100)
     print("Score is:", str(mark), "%.\n")
+
+
+time.sleep(1)
 
 
 def play_again():
@@ -112,7 +123,8 @@ questions = {
     "9. Which Country has the most Volcanoes?\n": "D",
     "10. Which country is the largest producer of Coffee??\n": "B",
     "11. Which is the hottest planet is the Solar system?\n": "D",
-    "12. Which European Country was the first to allow women to vote?\n": "A",
+    "12. Which European Country was the first to allow women to vote?\n":
+    "A",
     "13. What is the degree of triangle?\n": "C",
     "14. What is the Chemical symbol for table salt?\n": "D",
     "15. What is the largest three digit prime Number?\n": "B"
@@ -145,4 +157,5 @@ start()
 
 while play_again():
     start()
+
 print("Thanks for Playing this Game!")
