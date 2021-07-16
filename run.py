@@ -1,6 +1,7 @@
 """
 Multiple choice question and answers game
 """
+import sys
 import time
 # Heading
 print("\n")
@@ -17,12 +18,12 @@ print("\nWelcome to my Computer Quiz\n")
 confirm = input("Do you want to play a Game?(yes/no): ")
 confirm = confirm.upper()
 
+
 if confirm in ("Y", "YES"):
     pass
 else:
     print("Thank You! Come back later")
-    exit()
-
+    sys.exit()
 
 time.sleep(0.5)
 # Enter Name of the user, Game doesnot start without Name details.
@@ -73,9 +74,8 @@ def check_answer(answer, choice):
     if answer == choice:
         print("\n Well done! Correct Answer!\n")
         return True
-    else:
-        print("\n Incorrect Answer\n")
-        return False
+    print("\n Incorrect Answer\n")
+    return False
 
 
 def display_score(correct_choices):
