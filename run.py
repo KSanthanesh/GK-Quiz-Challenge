@@ -15,7 +15,7 @@ time.sleep(1)
 print("\nWelcome to my Computer Quiz\n")
 
 # confirmation whether the user want to play the game
-confirm = input("Do you want to play a Game?(yes/no): ")
+confirm = input("Do you want to play a Game?(yes/no): \n")
 confirm = confirm.upper()
 
 
@@ -28,7 +28,7 @@ else:
 time.sleep(0.5)
 # Enter Name of the user, Game doesnot start without Name details.
 while True:
-    name = input("Please Enter Your Name: ")
+    name = input("Please Enter Your Name: \n")
     if not name:
         print("Please Enter your Name before start: ")
     else:
@@ -52,7 +52,7 @@ def start():
             print(i)
 
         while True:
-            choice = input("Enter Your Answer (A,B,C or D): ")
+            choice = input("Enter Your Answer (A,B,C or D): \n")
             if choice not in ("A", "B", "C", "D", "a", "b", "c", "d"):
                 print("Please Enter a Valid options")
             else:
@@ -100,7 +100,7 @@ def play_again():
     """
     Choice given to Play again
     """
-    response = input("Do you want to Play again:(yes or no): ")
+    response = input("Do you want to Play again:(yes or no): \n")
     response = response.upper()
     if response in ("Y", "YES"):
         return True
