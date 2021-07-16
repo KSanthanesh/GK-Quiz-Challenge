@@ -104,11 +104,10 @@ def play_again():
     response = response.upper()
     if response in ("Y", "YES"):
         return True
-    elif response in ("N", "NO"):
+    if response in ("N", "NO"):
         return False
-    else:
-        print("Please Enter Valid option (yes or no).")
-        return play_again()
+    print("Please Enter Valid option (yes or no).")
+    return play_again()
 
 
 questions = {
