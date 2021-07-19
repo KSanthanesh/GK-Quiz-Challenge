@@ -56,14 +56,18 @@ Flow chart is used for this website.
 The result is ====> "Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)"
 - PEP8 Validator - To validate python code. There is no error, when i validate the code.<br>
     - Result
-    <details>
-<summary>PEP8- Result</summary>
-<img src="images/pep8-result.PNG" width="400">
+  <details>
+    <summary>PEP8- Result</summary>
+    <img src="images/pep8-result.PNG" width="400">
 </details>
 
 ## Features Testing
-- The game starts requesting the user to play the game. when the user enters "yes" the game move to the next stage.
-- [Yes-To-Play]()
+- The game starts requesting the user to play the game. when the user enters "yes" (upper or lower case)the game move to the next stage.when the User enters "no" (upper or lower case) or any other characters, the game will quit.<br>
+  [Yes-To-Play](#images/accept-toplay.PNG)<br>
+  [No-To-Quit](#images/reject-toplay.PNG)<br>
+  [Any-other-Letters-To-Quit](#images/reject-toplay2.PNG)
+
+
 
 
 
