@@ -82,7 +82,13 @@ The result is ====> "Your code has been rated at 10.00/10 (previous run: 10.00/1
 [Quit-The-Game](images/rejection-of-play.PNG)<br>
 [If-Enter-Anyother-Characters](images/invalid-characters.PNG)<br>
 
+## Bugs
+I would like to randamise the questions, but did not manage to get it right. 
 
+## Deployment
+
+
+## Acknowledgement
 
 
 
