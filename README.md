@@ -62,6 +62,7 @@ The result is ====> "Your code has been rated at 10.00/10 (previous run: 10.00/1
 </details>
 
 ## Features Testing
+### Actual TestCase
 - The game starts requesting the user to play the game. when the user enters "yes" (upper or lower case)the game move to the next stage.when the User enters "no" (upper or lower case) or any other characters, the game will quit.<br>
   [Yes-To-Play](#images/accept-toplay.PNG)<br>
   [No-To-Quit](#images/reject-toplay.PNG)<br>
@@ -73,8 +74,14 @@ The result is ====> "Your code has been rated at 10.00/10 (previous run: 10.00/1
 [Correct-Answer](#images/correct-answer.PNG)<br>
 [InCorrect-Answer](#images/incorrect-answer.PNG)<br>
 [If-Enter-Anyother-Characters](#images/invalid-answer.PNG)
-- After completing 15 questions the game will prompt the final score in terms of number of questions been answer correctly as well as percentage Score.
-[](#images/correct-answer.PNG)<br>
+- After completing 15 questions the game will prompt the final score in terms of number of questions been answer correctly as well as percentage Score.<br>
+[Quiz-Result](#images/quiz-result.PNG)<br>
+- The game will also allow a choice the user to play the game again or quit the game. They can enter "yes, y, no, n" lower or upper case.if they enter any other characters it will show error message that"Please Enter Valid option(yes or no).<br>
+[Restart-Game](#images/restart-game.PNG)<br>
+[Quit-The-Game](#imagesrejection-of-play.PNG)<br>
+[If-Enter-Anyother-Characters](#images/invalid-characters.PNG)<br>
+
+
 
 
 
