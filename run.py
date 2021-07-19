@@ -90,7 +90,7 @@ def display_score(correct_choices):
     print("Thank you for playing! You got", score, "/",
           len(questions), "questions correct.")
     mark = int(score/len(questions) * 100)
-    print("Score is:", str(mark), "%.\n")
+    print("Hi", name, ", Your Score is:", str(mark), "%.\n")
 
 
 time.sleep(1)
