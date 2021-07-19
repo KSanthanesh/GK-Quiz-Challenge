@@ -50,6 +50,8 @@ Flow chart is used for this website.
 - GitPod- is an open source platform for automated and ready-to-code.
 - Heroku- used for deployment the app.
 - Python Tutor - to check how the Python code behaves in each line.
+
+## Testing
 - pylint run.py - to validate python code in gitpod.
 The result is ====> "Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)"
 - PEP8 Validator - To validate python code. There is no error, when i validate the code.<br>
@@ -59,6 +61,8 @@ The result is ====> "Your code has been rated at 10.00/10 (previous run: 10.00/1
 <img src="images/pep8-result.PNG" width="400">
 </details>
 
+## Features Testing
+- The game starts requesting the user to play the game. when the user enters "yes" the game move to the next stage.
 
 
 
