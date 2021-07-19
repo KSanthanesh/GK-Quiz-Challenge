@@ -29,5 +29,24 @@ The game starts requesting the user to play the game. when the user enters "Yes"
 ### Purpose of Website
 The game is created to test the User to test their General Knowledge. This will help the kids to learn Various topics in more interesting way.
 
+## Scope
+I want younger children to play this game to improve their General Knowledge.
+
+### Features
+The game is  designed multiple choice questions. Allow the user to choose to play the game or quit the game. Four choices of answer are given for each questions. Scores are displayed as number of questions answer correctly as well as in percentage too.
+
+### Future Features
+- Add more questions from different subjects and different categories.
+- Randamise questions.
+
+## Structure
+The website is designed to run a single flow. The user have to answer each question before go to the next questions.
+
+### Flow Chart
+Flow chart is used for this website.
+
+## Technologies Used:
+- GitHub- to save the project code and host the live  project.
+- GitPod- is an open source platform for automated and ready-to-code.
 
 
