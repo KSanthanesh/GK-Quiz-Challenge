@@ -3,12 +3,13 @@ Multiple choice question and answers game
 """
 import sys
 import time
+
 # Heading
-print("\n")
+print(" ")
 print("               *************************")
-print("               ****                 ****")
+print("               **                     **")
 print("               **  GK Quiz Challenge  **")
-print("               ****                 ****")
+print("               **                     **")
 print("               *************************")
 time.sleep(1)
 # Welcome message
@@ -30,9 +31,10 @@ time.sleep(0.5)
 while True:
     name = input("Please Enter Your Name: \n")
     if not name:
-        print("Please Enter your Name before start: ")
+        print("Please Enter your Name before start: \n")
     else:
-        print("Hi", name, "Let's start the Game\n")
+        print("Hi", name, "Let's start the Game")
+        print("There are 15 questions to answer. Best of Luck!!!\n")
         break
 time.sleep(0.5)
 
@@ -80,7 +82,8 @@ def check_answer(answer, choice):
 
 def display_score(correct_choices):
     """
-    Score display
+    Score display in terms of number of questions been answer correctly.
+    And Calculate the score in percentage too
     """
     print("**********************************************************")
     print("             ---------------------------")
@@ -110,6 +113,7 @@ def play_again():
     return play_again()
 
 
+# questions and correct answer in dictionaries method
 questions = {
     "1. What is the square root of 144?\n ": "A",
     "2. Which Country is known as the 'Playground of Europe'?\n": "C",
@@ -131,6 +135,7 @@ questions = {
 }
 
 
+# multiple choice answers in list methods
 options = [
     ["A. 12", "B. 22", "C. 14", "D. 11\n"],
     ["A. Austria", "B. France", "C. Switzerland", "D. Italy\na"],
