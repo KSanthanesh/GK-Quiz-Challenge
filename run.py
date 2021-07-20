@@ -5,6 +5,7 @@ import sys
 import time
 import gspread
 from google.oauth2.service_account import Credentials
+# from pprint import pprint
 
 
 SCOPE = [
@@ -12,10 +13,14 @@ SCOPE = [
     "https://www.googleapis.com/auth/drive.file",
     "https://www.googleapis.com/auth/drive"
 ]
+
 CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('Gk_Quiz_Challenge')
+
+score_details = SHEET.worksheet('score_details')
+
 
 # Heading
 print(" ")
@@ -107,6 +112,10 @@ def display_score(correct_choices):
           len(questions), "questions correct.")
     mark = int(score/len(questions) * 100)
     print("Hi", name, ", Your Score is:", str(mark), "%.\n")
+    marks = mark / 100
+
+    user = [name, score, marks]
+    score_details.append_row(user)
 
 
 time.sleep(1)
