@@ -23,7 +23,7 @@ confirm = confirm.upper()
 if confirm in ("Y", "YES"):
     pass
 else:
-    print("Thank You! Come back later")
+    print('Thank You! Come back later')
     sys.exit()
 
 time.sleep(0.5)
