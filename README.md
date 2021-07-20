@@ -86,9 +86,21 @@ The result is ====> "Your code has been rated at 10.00/10 (previous run: 10.00/1
 I would like to randamise the questions, but did not manage to get it right. 
 
 ## Deployment
-
+Entering \n for input column is important rule to follow before the deployment.
+#### Procedure for deployment
+1. Sign up in to Heroku.
+2. Create a App name and choose the region.
+3. Go to settings tab and select buildpack then select python and then node.js.
+4. Then click to deploy tab and select GitHub.
+5. Then search for the app name and connect it from github repository. Then select deploy branch for Manual Entering. The software will build the log and display the successful deployment message.Then we can view the app option.
 
 ## Acknowledgement
+- I would like to thank my mentor Rohit Sharma and my tutors Kasia for their helpfulness, constructive feedback and guidance when needed.
+- I would like to thank the staff and students of Code Institute for their help.
+- I also like to thank Slack Community for sharing the open discussion from various students.
+- I search lots of information from Google, W3 School and Youtube for this project.
+- Reference taken from this videos
+
 
 
 
