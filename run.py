@@ -5,7 +5,7 @@ import sys
 import time
 import gspread
 from google.oauth2.service_account import Credentials
-# from pprint import pprint
+from pprint import pprint
 
 
 SCOPE = [
@@ -116,6 +116,8 @@ def display_score(correct_choices):
 
     user = [name, score, marks]
     score_details.append_row(user)
+    result = score_details.get_all_values()
+    pprint("Other Scores are: ", result)
 
 
 time.sleep(1)
