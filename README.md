@@ -50,10 +50,25 @@ The website is designed to run a single flow. The user have to answer each quest
 Flow chart is used for this website.
 
 ## Technologies Used:
+- Python- To create Multiple choice question.
 - GitHub- to save the project code and host the live  project.
 - GitPod- is an open source platform for automated and ready-to-code.
 - Heroku- used for deployment the app.
 - Python Tutor - to check how the Python code behaves in each line.
+- Google Sheet- To store name and score details. Need to create a google sheet.
+- Google Cloud Platform- for activating API Credentials.
+#### Activating API Credential
+API will allow our Python project to access  and update data in our spreadsheet. In the Google cloud platform click on the “Select a project”  button and then select “new project”. Now let's give the project a name. Then select the "APIs and services" from the side menu, and then select “Library”. In order to access our spreadsheet, we need to enable two APIs, the first for Google Drive, where we will  get some credentials in order to securely access our Google files from the drive. And  our second API will be to Google Sheets. Then search Google Drive, followed by clicking on google drive API select enable option. <br>
+Now, in order to connect to this API, we need to  generate some credentials. To generate our credentials we click  the “Create credentials” button. And now we have a form to fill out. 
+- In the "Which API are you using"  dropdown select "Google Drive API".
+- click Application data button.
+- Then select i am not using them for compute engine,App engine or cloud platform.
+- Then click next and then done button.
+- After that Display name for Service account details
+- then select create button.
+- followed by select the dropdown menu Editor.
+- click on continue button.
+- Then go to ApIs and Services, click credential then can see a service account. Click the service account, On the next page, click on the Keys tab, then Click on the Add Key dropdown and select Create New Key. Followed by Select JSON and then click Create. This will trigger the json file with your API credentials in it to download to the computer. Then rename it creds.jsonin gitpod workspace.
 
 ## Testing
 - pylint run.py - to validate python code in gitpod.
@@ -83,7 +98,7 @@ The result is ====> "Your code has been rated at 10.00/10 (previous run: 10.00/1
 - The game will also allow a choice the user to play the game again or quit the game. They can enter "yes, y, no, n" lower or upper case.if they enter any other characters it will show error message that"Please Enter Valid option(yes or no).<br>
 [Restart-Game](images/restart-game.PNG)<br>
 [Quit-The-Game](images/rejection-of-play.PNG)<br>
-[If-Enter-Anyother-Characters](images/invalid-characters.PNG)<br>
+[If-Enter-Any-other-Characters](images/invalid-characters.PNG)<br>
 
 ## Bugs
 - I would like to randamise the questions, but did not manage to get it right.
@@ -115,6 +130,9 @@ Now requirements.txt file has been updated. Heroku will use this list to install
 - I also like to thank Slack Community for sharing the open discussion from various students.
 - I search lots of information from Google, W3 School and Youtube for this project.
 - Reference taken from this videos
+https://www.bing.com/videos/search?q=Python+Games+for+Beginners&&view=detail&mid=BFA54B4759D1B362B813BFA54B4759D1B362B813&&FORM=VRDGAR&ru=%2Fvideos%2Fsearch%3Fq%3DPython%2BGames%2Bfor%2BBeginners%26Form%3DVDRSCL%26%3D0
+https://www.youtube.com/watch?v=-I96VIIiIXk
+https://www.youtube.com/watch?v=yriw5Zh406s&t=63s
 
 
 
