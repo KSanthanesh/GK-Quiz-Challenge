@@ -24,8 +24,11 @@
 This game is designed for Users to test their General Knowledge. This game contains 15 questions from various topic.
 
 ## Strategy
+Attract young people to play the game to improve their General Knowledge.
 ### UX
 The game starts requesting the user to play the game. when the user enters "Yes" the game move to the next stage to playing the game, But the user enters "NO" the game will quit. When the User enters "YES" the game allows the user to enter his or her Name. Entering the name is important parameter in this game. The game will not go to the next stage if they not enter the Name.<br> After entering the name, the questions will appear for the player. The answer should be entered will be A,B,C,D either lower or upper case. If the answer is correct it will show "Correct Answer", if it is not correct it will show "Incorrect Answer".If any other characters entered the programme will prompt an error message. The error message will be "Please Enter a Valid option A,B,C,D". <br>After completing the 15 questions the game will prompt the final score in terms of number of questions been answer correctly as well as percentage score. It will also allow a choice for the user to play the game again.
+
+### Business Vision
 
 ### Purpose of Website
 The game is created to test the User to test their General Knowledge. This will help the kids to learn Various topics in more interesting way.
@@ -83,14 +86,26 @@ The result is ====> "Your code has been rated at 10.00/10 (previous run: 10.00/1
 [If-Enter-Anyother-Characters](images/invalid-characters.PNG)<br>
 
 ## Bugs
-I would like to randamise the questions, but did not manage to get it right. 
+- I would like to randamise the questions, but did not manage to get it right.
+- I had lot of difficulties to getting the name and score data transferred and stored in Google spreadsheets. 
 
 ## Deployment
-Entering \n for input column is important rule to follow before the deployment.
+First we need to go to github website the create a new repositary using code Institute- python Essential Template. Followed by giving a new name of the website.Then need to click the create repositary button. After click the button it will bring us to go to another page, which contains the green button labelled as Gitpod.Click the Gitpod button will bring us to the Gitpod Workspace for coding screen.
+
+#### Gitpod
+
+Used Gitpod Workspace for coding. To preview the browser window need to type "python3 -m run.py" in the terminal window at the bottom.Afterthat, have to do git add for add files or remove files and do git commit for reasoning and do the git push for git hub repositary website.<br>
+
 #### Procedure for deployment
+Need to add a new line character at the end of the text inside the input method. Without this extra line, the text for the import
+request will not show up in the terminal.To create our list of requirements, we use the following command in the gitpod terminal.<br>
+'pip3 freeze > requirements.txt'<br>
+Now requirements.txt file has been updated. Heroku will use this list to install these things in to the application before the project code runs.
+
+#### Using Heroku
 1. Sign up in to Heroku.
 2. Create a App name and choose the region.
-3. Go to settings tab and select buildpack then select python and then node.js.
+3. Go to settings tab and select config vars then type keys to CREDS and in the value field Creds.json file need to paste from the gitpod. Then select buildpack then select python and then node.js and click on save changes.
 4. Then click to deploy tab and select GitHub.
 5. Then search for the app name and connect it from github repository. Then select deploy branch for Manual Entering. The software will build the log and display the successful deployment message.Then we can view the app option.
 
