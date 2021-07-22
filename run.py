@@ -5,7 +5,7 @@ import sys
 import time
 import gspread
 from google.oauth2.service_account import Credentials
-from pprint import pprint
+# from pprint import pprint
 
 
 SCOPE = [
@@ -47,7 +47,7 @@ else:
 time.sleep(0.5)
 # Enter Name of the user, Game doesnot start without Name details.
 while True:
-    name = input('Please Enter Your Name: \n')
+    name = input('Please Enter Your Name: \n').capitalize()
     if not name:
         print('Please Enter your Name before start: \n')
     else:
@@ -114,11 +114,13 @@ def display_score(correct_choices):
     print('Hi', name, ', Your Score is:', str(mark), '%.\n')
     marks = mark / 100
 
-    user = [name, score, marks]
+    user = [marks, score, name]
     score_details.append_row(user)
-    result = score_details.get_all_values()
-    print("Other Players Scores are below:\n")
-    pprint(result)
+    results = score_details.get_all_values()
+    print("Top 3 Scores:\n")
+    result_1 = sorted(results[1:], reverse=True)[:3]
+    for result in result_1:
+        print(result[2] + "'s Score is " + result[0])
 
 
 time.sleep(1)
@@ -128,7 +130,7 @@ def play_again():
     """
     Choice given the player repeat the game
     """
-    response = input('Do you want to Play again:(yes or no): \n')
+    response = input('\nDo you want to Play again:(yes or no): \n')
     response = response.upper()
     if response in ('Y', 'YES'):
         return True
@@ -163,7 +165,7 @@ questions = {
 # multiple choice answers in list methods
 options = [
     ['A. 12', 'B. 22', 'C. 14', 'D. 11\n'],
-    ['A. Austria', 'B. France', 'C. Switzerland', 'D. Italy\na'],
+    ['A. Austria', 'B. France', 'C. Switzerland', 'D. Italy\n'],
     ['A. 75%', 'B. 60%', 'C. 69%', 'D. 65%\n'],
     ['A. The Carolina Reaper', 'B. Ghost Pepper', 'C. Pot Barrackpore',
      'D. Pot Red\n'],
