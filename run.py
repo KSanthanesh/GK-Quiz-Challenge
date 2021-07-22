@@ -113,7 +113,7 @@ def display_score(correct_choices):
     mark = int(score/len(questions) * 100)
     print('Hi', name, ', Your Score is:', str(mark), '%.\n')
     marks = mark / 100
-
+# Update User's name and score in google sheet
     user = [marks, score, name]
     score_details.append_row(user)
     results = score_details.get_all_values()
