@@ -69,7 +69,7 @@ OPTIONS = [
 print(' ')
 print(colored("       *************************", 'cyan', attrs=['bold']))
 print(colored("       **                     **", 'cyan', attrs=['bold']))
-print(colored("       **  GK Quiz Challenge  **", 'white', attrs=['bold']))
+print(colored("       **  GK Quiz Challenge  **", 'magenta', attrs=['bold']))
 print(colored("       **                     **", 'cyan', attrs=['bold']))
 print(colored("       *************************", 'cyan', attrs=['bold']))
 time.sleep(1)
@@ -151,9 +151,11 @@ def display_score(correct_choices):
     """
     print(colored("*******************************************************",
                   'cyan', attrs=['bold']))
-    print(colored("    ---------------------------", 'cyan', attrs=['bold']))
+    print(colored("    ---------------------------", 'magenta',
+                  attrs=['bold']))
     print(colored("    |       Quiz Results      |", 'white', attrs=['bold']))
-    print(colored("    ---------------------------\n", 'cyan', attrs=['bold']))
+    print(colored("    ---------------------------\n", 'magenta',
+                  attrs=['bold']))
 
     score = int(correct_choices)
     print('Thank you for playing! You got', score, '/',
@@ -166,11 +168,11 @@ def display_score(correct_choices):
     user = [marks, score, username]
     SCORE_DETAILS.append_row(user)
     results = SCORE_DETAILS.get_all_values()
-    print(colored("Top 3 Scores:\n", 'yellow', attrs=['bold']))
+    print(colored("Top 3 Scores:\n", 'cyan', attrs=['bold']))
     result_1 = sorted(results[1:], reverse=True)[:3]
     for result in result_1:
         print(colored(result[2] + "'s Score is " + result[0],
-              'yellow', attrs=['bold']))
+              'cyan', attrs=['bold']))
 
 
 time.sleep(1)
