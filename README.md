@@ -103,6 +103,8 @@ The result is ====> "Your code has been rated at 10.00/10 (previous run: 10.00/1
 [Restart-Game](images/restart-game.PNG)<br>
 [Quit-The-Game](images/rejection-of-play.PNG)<br>
 [If-Enter-Any-other-Characters](images/invalid-characters.PNG)<br>
+- Name and scores will automatically stored in google sheet after finishing the game.<br>
+[Google Sheet](images/google_sheet.PNG)
 
 ## Bugs
 - I would like to randamise the questions, but did not manage to get it right.
