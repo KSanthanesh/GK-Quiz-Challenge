@@ -6,6 +6,7 @@ from termcolor import colored
 import time
 import gspread
 from google.oauth2.service_account import Credentials
+# from pprint import pprint
 
 
 SCOPE = [
@@ -19,20 +20,19 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('Gk_Quiz_Challenge')
 
-SCORE_DETAILS = SHEET.worksheet('score_details')
+score_details = SHEET.worksheet('score_details')
 
 
 # Heading
 print(' ')
-print(colored("        *************************", 'cyan', attrs=['bold']))
-print(colored("        *************************", 'cyan', attrs=['bold']))
-print(colored("        **  GK Quiz Challenge  **", 'white', attrs=['bold']))
-print(colored("        *************************", 'cyan', attrs=['bold']))
-print(colored("        *************************", 'cyan', attrs=['bold']))
+print(colored("       *************************", 'cyan', attrs=['bold']))
+print(colored("       **                     **", 'cyan', attrs=['bold']))
+print(colored("       **  GK Quiz Challenge  **", 'white', attrs=['bold']))
+print(colored("       **                     **", 'cyan', attrs=['bold']))
+print(colored("       *************************", 'cyan', attrs=['bold']))
 time.sleep(1)
 # Welcome message
 print('\nWelcome to my Computer Quiz\n')
-
 
 # confirmation whether the user want to play the game
 confirm = input('Do you want to play a Game?(yes/no): \n')
@@ -47,11 +47,11 @@ else:
 time.sleep(0.5)
 # Enter Name of the user, Game doesnot start without Name details.
 while True:
-    user_name = input('Please Enter Your Name: \n').capitalize()
-    if not user_name:
+    username = input('Please Enter Your Name: \n').capitalize()
+    if not username:
         print('Please Enter your Name before start: \n')
     else:
-        print("Hi", user_name, "Let's start the Game")
+        print("Hi", username, "Let's start the Game")
         print('There are 15 questions to answer. Best of Luck!!!\n')
         break
 time.sleep(0.5)
@@ -65,11 +65,11 @@ def start():
     correct_choices = 0
     question_num = 1
 
-    for key in QUESTIONS:
+    for key in questions:
         print(colored("******************************************************",
-                      'yellow', attrs=['bold']))
+                      'cyan', attrs=['bold']))
         print(key)
-        for i in OPTIONS[question_num - 1]:
+        for i in options[question_num - 1]:
             print(i)
 
         while True:
@@ -80,9 +80,12 @@ def start():
                 break
         choice = choice.upper()
         choices.append(choice)
-        correct_choices += check_answer(QUESTIONS.get(key), choice)
+        correct_choices += check_answer(questions.get(key), choice)
         question_num += 1
     display_score(correct_choices)
+
+
+time.sleep(0.5)
 
 
 def check_answer(answer, choice):
@@ -90,10 +93,9 @@ def check_answer(answer, choice):
     Feedback given for right and wrong answer
     """
     if answer == choice:
-        print(colored("\n Well done! Correct Answer!\n",
-                      'green', attrs=['bold']))
+        print('\n Well done! Correct Answer!\n')
         return True
-    print(colored("\n Incorrect Answer\n", 'red', attrs=['bold']))
+    print('\n Incorrect Answer\n')
     return False
 
 
@@ -102,26 +104,26 @@ def display_score(correct_choices):
     Score display in terms of number of questions been answer correctly.
     And Calculate the score in percentage too
     """
-    print(colored("**********************************************************",
-                  'yellow', attrs=['bold']))
+    print(colored("*******************************************************"
+                  'cyan', attrs=['bold']))
     print('             ---------------------------')
     print('             |       Quiz Results      |')
     print('             ---------------------------\n')
     score = int(correct_choices)
     print('Thank you for playing! You got', score, '/',
-          len(QUESTIONS), 'questions correct.')
-    mark = int(score/len(QUESTIONS) * 100)
-    print('Hi', user_name, ', Your Score is: ', str(mark), '%.\n')
+          len(questions), 'questions correct.')
+    mark = int(score/len(questions) * 100)
+    print('Hi', username, ', Your Score is:', str(mark), '%.\n')
     marks = mark / 100
-# Update User's name and score in google sheet
-    user = [marks, score, user_name]
-    SCORE_DETAILS.append_row(user)
-    results = SCORE_DETAILS.get_all_values()
-    print(colored("Top 3 Scores:\n", 'yellow', attrs=['bold']))
+
+    # Update User's name and score in google sheet
+    user = [marks, score, username]
+    score_details.append_row(user)
+    results = score_details.get_all_values()
+    print("Top 3 Scores:\n")
     result_1 = sorted(results[1:], reverse=True)[:3]
     for result in result_1:
-        print(colored(result[2] + "'s Score is " + result[0],
-                      'cyan', attrs=['bold']))
+        print(result[2] + "'s Score is " + result[0])
 
 
 time.sleep(1)
@@ -142,7 +144,7 @@ def play_again():
 
 
 # questions and correct answer in dictionaries method
-QUESTIONS = {
+questions = {
     '1. What is the square root of 144?\n ': 'A',
     "2. Which Country is known as the 'Playground of Europe'?\n": 'C',
     '3. What percentage of the human body is water?\n': 'B',
@@ -164,7 +166,7 @@ QUESTIONS = {
 
 
 # multiple choice answers in list methods
-OPTIONS = [
+options = [
     ['A. 12', 'B. 22', 'C. 14', 'D. 11\n'],
     ['A. Austria', 'B. France', 'C. Switzerland', 'D. Italy\n'],
     ['A. 75%', 'B. 60%', 'C. 69%', 'D. 65%\n'],
