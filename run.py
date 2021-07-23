@@ -5,7 +5,6 @@ import sys
 import time
 import gspread
 from google.oauth2.service_account import Credentials
-# from pprint import pprint
 
 
 SCOPE = [
@@ -65,10 +64,10 @@ def start():
     correct_choices = 0
     question_num = 1
 
-    for key in questions:
+    for key in QUESTIONS:
         print('**********************************************************')
         print(key)
-        for i in options[question_num - 1]:
+        for i in OPTIONS[question_num - 1]:
             print(i)
 
         while True:
@@ -79,18 +78,16 @@ def start():
                 break
         choice = choice.upper()
         choices.append(choice)
-        correct_choices += check_answer(questions.get(key), choice)
+        correct_choices += check_answer(QUESTIONS.get(key), choice)
         question_num += 1
     display_score(correct_choices)
-
-
-time.sleep(0.5)
 
 
 def check_answer(answer, choice):
     """
     Feedback given for right and wrong answer
     """
+    time.sleep(1)
     if answer == choice:
         print('\n Well done! Correct Answer!\n')
         return True
@@ -109,8 +106,8 @@ def display_score(correct_choices):
     print('             ---------------------------\n')
     score = int(correct_choices)
     print('Thank you for playing! You got', score, '/',
-          len(questions), 'questions correct.')
-    mark = int(score/len(questions) * 100)
+          len(QUESTIONS), 'questions correct.')
+    mark = int(score/len(QUESTIONS) * 100)
     print('Hi', name, ', Your Score is:', str(mark), '%.\n')
     marks = mark / 100
 # Update User's name and score in google sheet
@@ -141,7 +138,7 @@ def play_again():
 
 
 # questions and correct answer in dictionaries method
-questions = {
+QUESTIONS = {
     '1. What is the square root of 144?\n ': 'A',
     "2. Which Country is known as the 'Playground of Europe'?\n": 'C',
     '3. What percentage of the human body is water?\n': 'B',
@@ -163,7 +160,7 @@ questions = {
 
 
 # multiple choice answers in list methods
-options = [
+OPTIONS = [
     ['A. 12', 'B. 22', 'C. 14', 'D. 11\n'],
     ['A. Austria', 'B. France', 'C. Switzerland', 'D. Italy\n'],
     ['A. 75%', 'B. 60%', 'C. 69%', 'D. 65%\n'],
