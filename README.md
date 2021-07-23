@@ -48,6 +48,11 @@ The website is designed to run a single flow. The user have to answer each quest
 
 ### Flow Chart
 Flow chart is used for this website.
+<details>
+<summary>Flow Chart</summary>
+<img src= "images/flow_chart.pdf" width= 300>
+</details>
+
 
 ## Technologies Used:
 - Python- To create Multiple choice question.
