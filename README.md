@@ -13,7 +13,7 @@
   - [Purpose of Website](#purpose-of-website)
 - [Scope](#scope "Goto Scope")
    - [Features](#features)
-   - [Future Feature](#future-features)
+   - [Future Features](#future-features)
 - [Structure](#structure "Goto Structure")
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
