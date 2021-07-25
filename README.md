@@ -1,7 +1,8 @@
 # Gk Quiz Challenge
 <p align= "left">
-<img width= "400" src= "images/home-page.PNG">
+<img width= "500" src= "images/home-page.PNG">
 </p>
+
 ## Types of Content
 
 - [Introduction](#introduction "Goto Indroduction")
