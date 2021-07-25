@@ -26,6 +26,9 @@ This game is designed for Users to test their General Knowledge. This game conta
 ## Strategy
 Attract young people to play the game to improve their General Knowledge.
 ### UX
+1. As a user i should be able to vies the questions.
+2. As a user i should be able to view whether i answered right or wrong.
+3. 
 The game starts requesting the user to play the game. when the user enters "Yes" the game move to the next stage to playing the game, But the user enters "NO" the game will quit. When the User enters "YES" the game allows the user to enter his or her Name. Entering the name is important parameter in this game. The game will not go to the next stage if they not enter the Name.<br> After entering the name, the questions will appear for the player. The answer should be entered will be A,B,C,D either lower or upper case. If the answer is correct it will show "Correct Answer", if it is not correct it will show "Incorrect Answer".If any other characters entered the programme will prompt an error message. The error message will be "Please Enter a Valid option A,B,C,D". <br>After completing the 15 questions the game will prompt the final score in terms of number of questions been answer correctly as well as percentage score. It will also allow a choice for the user to play the game again.
 
 ### Business Vision
