@@ -100,7 +100,7 @@ The result is ====> "Your code has been rated at 10.00/10 (previous run: 10.00/1
 - After completing 15 questions the game will prompt the final score in terms of number of questions been answer correctly as well as percentage Score.<br>
 [Quiz-Result](images/quiz-result.PNG)<br>
 - The game will also allow a choice the user to play the game again or quit the game. They can enter "yes, y, no, n" lower or upper case.if they enter any other characters it will show error message that"Please Enter Valid option(yes or no).<br>
-[Restart-Game](images/restart-game.PNG)<br>
+[Restart-Game](images/play-again.PNG)<br>
 [Quit-The-Game](images/rejection-of-play.PNG)<br>
 [If-Enter-Any-other-Characters](images/invalid-characters.PNG)<br>
 - Name and scores will automatically stored in google sheet after finishing the game.<br>
@@ -115,11 +115,11 @@ First we need to go to github website the create a new repositary using code Ins
 
 #### Gitpod
 
-Used Gitpod Workspace for coding. To preview the browser window need to type "python3 -m run.py" in the terminal window at the bottom.Afterthat, have to do git add for add files or remove files and do git commit for reasoning and do the git push for git hub repositary website.<br>
+Used Gitpod Workspace for coding. To preview the browser window need to type "python3 run.py" in the terminal window at the bottom.Afterthat, have to do git add for add files or remove files and do git commit for reasoning and do the git push for git hub repositary website.<br>
 
 #### Procedure for deployment
 Need to add a new line character at the end of the text inside the input method. Without this extra line, the text for the import
-request will not show up in the terminal.To create our list of requirements, we use the following command in the gitpod terminal.<br>
+request will not show up in the terminal. To create our list of requirements, we use the following command in the gitpod terminal.<br>
 'pip3 freeze > requirements.txt'<br>
 Now requirements.txt file has been updated. Heroku will use this list to install these things in to the application before the project code runs.
 
