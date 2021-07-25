@@ -12,7 +12,7 @@
   - [Purpose of Website](#purpose-of-website)
 - [Scope](#scope "Goto Scope")
    - [Features](#features)
-   - [Future Feature](#future-feature)
+   - [Future Feature](#future-features)
 - [Structure](#structure "Goto Structure")
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
@@ -86,7 +86,6 @@ Now, in order to connect to this API, we need to  generate some credentials. To 
 - pylint run.py - to validate python code in gitpod.
 The result is ====> "Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)"
 - PEP8 Validator - To validate python code. There is no error, when i validate the code.<br>
-    - Result
   <details>
     <summary>PEP8- Result</summary>
     <img src="images/pep8-result.PNG" width="400">
