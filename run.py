@@ -129,13 +129,11 @@ def start():
     display_score(correct_choices)
 
 
-time.sleep(0.5)
-
-
 def check_answer(answer, choice):
     """
     Feedback given for right and wrong answer
     """
+    time.sleep(0.5)
     if answer == choice:
         print(colored("\n Well done! Correct Answer!\n", 'green',
                       attrs=['bold']))
