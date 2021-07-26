@@ -138,6 +138,8 @@ Now requirements.txt file has been updated. Heroku will use this list to install
 4. Then click to deploy tab and select GitHub.
 5. Then search for the app name and connect it from github repository. Then select deploy branch for Manual Entering. The software will build the log and display the successful deployment message.Then we can view the app option.
 
+The above steps have created the Heroku Mock Terminal: https://gk-quiz-challenge.herokuapp.com/
+
 ## Acknowledgement
 - I would like to thank my mentor Rohit Sharma and my tutors Kasia for their helpfulness, constructive feedback and guidance when needed.
 - I would like to thank the staff and students of Code Institute for their help.
@@ -147,9 +149,7 @@ Now requirements.txt file has been updated. Heroku will use this list to install
 https://www.bing.com/videos/search?q=Python+Games+for+Beginners&&view=detail&mid=BFA54B4759D1B362B813BFA54B4759D1B362B813&&FORM=VRDGAR&ru=%2Fvideos%2Fsearch%3Fq%3DPython%2BGames%2Bfor%2BBeginners%26Form%3DVDRSCL%26%3D0
 https://www.youtube.com/watch?v=-I96VIIiIXk
 https://www.youtube.com/watch?v=yriw5Zh406s&t=63s
-
-
-
+- Thanks for reading my README.md file
 
 
 
